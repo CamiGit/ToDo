@@ -1,0 +1,124 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY */
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eafaea;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+/* CONTENEDOR */
+#ContenedorPrincipal{
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+/* FORMULARIO (CARD) */
+#FormPrincipal{
+    flex: 3;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #c0eba4;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* CONTADOR */
+#Contador {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#dbf7e3;
+    text-align: center;
+    font-weight: bold;
+    color: #065f46;
+    font-size: 15px;
+}
+
+/* INPUT PRINCIPAL */
+#nuevaTarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* SELECT */
+#tarea {
+    width: 65%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BOTÓN AGREGAR*/
+#btnAgregar {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+#btnAgregar:hover {
+    background-color: #059669;
+}
+
+/* BOTON ELIMINAR TAREAS HECHAS */
+#btnBorrarTareas{
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnBorrarTareas:hover{
+    background-color: rgb(239, 10, 10);
+}
+
+/* LISTA */
+#listaTareas {
+    margin-top: 20px;
+}
+
+/* TAREA NORMAL */
+#listaTareas li {
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* COMPLETADA */
+#listaTareas li.hecha {
+    background-color: #d1fae5;
+    text-decoration: line-through;
+    color: #065f46;
+}
+
+/* URGENTE */
+#listaTareas li.urgente {
+    background-color: #fee2e2;
+    border-left: 5px solid red;
+}
+

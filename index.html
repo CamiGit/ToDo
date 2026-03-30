@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- titulo principal -->
+    <h1 id="Titulo">ToDo Zone</h1>
+
+    <!-- Mensaje de bienvenida -->
+    <div id="ContentBienvenida">
+        <h2 id="Bienvenida">Bienvenid@ a tu lista de tareas</h2>
+    </div>
+
+    <div id="ContenedorPrincipal">
+    <!-- Formulario de tareas -->
+        <form id="FormPrincipal">
+            <p>Ingresa una nueva tarea</p>
+            <input type="text" id="nuevaTarea" placeholder="Clase de Ingles">
+
+            <select name="tarea" id="tarea">
+                <option value=""> -- Seleciona una opción -- </option>
+                <option value="Trabajo">💼 Trabajo</option>
+                <option value="Estudio">📖 Estudio</option>
+                <option value="Personal">🏠 Personal</option>
+                <option value="Urgente">🛑 Urgente</option>
+                <option value="Otra">✏️ Otra, ¿cuál? </option>
+            </select>
+
+            <!-- Input reservado para agregar otra cateria -->
+            <input type="text" id="otraCategoria" placeholder="Ingresa otra categoria" style="display: none;">
+
+            <!-- Boton principal -->
+            <button type="button" id="btnAgregar">➕ Agregar</button>
+
+            
+
+            <!-- Manejo de error si el formulario le falta un campo -->
+            <div>
+                <span id="errorMsg" style="display: none;">
+                    Debes agregar una tarea
+                </span>
+            </div>
+
+            <!-- Manejo de error para eliminar tareas hechas -->
+            <div>
+                <span id="errorMsgEli" style="display: none;">
+                    Debe estar por lo menos tener una tarea marcada como hecha
+                </span>
+            </div>
+
+        </form>
+        <div>
+            <!-- Contador de tareas -->
+            <div id="Contador">
+            <span id="completadas">0</span> de <span id="total">0</span> tareas completadas
+            </div>
+            <!-- Boton eliminar tareas hechas -->
+            <button type="button" id="btnBorrarTareas">🧹Eliminar tareas hechas</button>
+            
+        </div>
+    </div>
+    <!-- Lista de tareas -->
+    <ul id="listaTareas"></ul>
+    <script src="app.js"></script>
+</body>
+</html>
