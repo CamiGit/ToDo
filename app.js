@@ -125,10 +125,10 @@ function eliminarTarea(btn) {
         // Valiable almacena el li padre del boton
         const li = btn.parentElement;
         // Almacena el estado de la clase
-        const wasHecha = li.classList.contains('hecha');
+        const estaHecha = li.classList.contains('hecha');
 
         // valida si el esta de la tarea esta como hecha, resta uno a tareas hechas
-        if (wasHecha) tareasHechas--;
+        if (estaHecha) tareasHechas--;
         // resta una unidad al total de tareas ya que elimina una tarea este hecha o no
         totalTareas--;
         // Asigna nuevos valores a los contadores
@@ -140,6 +140,7 @@ function eliminarTarea(btn) {
     }
 }
 
+// Esta función elimina todas las tareas hechas en una sola ejecucción
 function eliminarTareasHechas(){
     // Obtener las tareas hechas
     const tareasEliminar = document.querySelectorAll('li.hecha')
@@ -151,19 +152,19 @@ function eliminarTareasHechas(){
         errorMsgEli.style.display = "block";
         return;
     }
-
+    // Cambia el estado del error
     errorMsgEli.style.display = "none"
 
-    // Confirmacion de cantidad de tareas a eliminar
+    // Confirmacion de cantidad de tareas a eliminar por parte del usuario
     if (confirm(`Se eliminaran ${cantidad} tareas hechas, ¿Deseas continuar?`)){
-
+        // Elimina los li seleccionados
         tareasEliminar.forEach(li => {
             li.remove()
         })
 
+        // Actualiza el contador
         totalTareas -= cantidad
         tareasHechas = 0
-
         spanTotal.textContent = totalTareas
         spanCompletadas.textContent = tareasHechas
 
