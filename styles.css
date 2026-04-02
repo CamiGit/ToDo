@@ -75,6 +75,14 @@ body{
     background-color: #059669;
 }
 
+#otraCategoria {
+    width: 65%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
 /* BOTON ELIMINAR TAREAS HECHAS */
 #btnBorrarTareas{
     width: 100%;

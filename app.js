@@ -21,8 +21,8 @@ function agregarTarea(){
     const texto = inputTarea.value.trim();
     let categoria = selectCategoria.value;
 
-    // Valida si el usuario selecciono otra categoria y si lo deja en blanco deja por defecto Otra
-    if (categoria === "otra") {
+// Valida si el usuario selecciono otra categoria y si lo deja en blanco deja por defecto Otra
+    if (categoria === "Otra") {
         categoria = otraCategoria.value.trim() || "Otra";
     }
 
@@ -82,7 +82,7 @@ btnAgregar.onclick = agregarTarea;
 
 // Valida si el usuario ingreso otra categoria mostrar en pantalla el campo donde el usuario ingresaria la nueva catetoria
 selectCategoria.addEventListener("change", function() {
-    if (selectCategoria.value === "otra") {
+    if (selectCategoria.value === "Otra") {
         otraCategoria.style.display = 'block';
     } else {
         otraCategoria.style.display = 'none';
